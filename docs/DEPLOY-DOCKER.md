@@ -1,6 +1,6 @@
 # Deploy com Docker
 
-Imagem: `ghcr.io/xnetinho/magodesk-server-s6:latest` (amd64, arm64, armv7, i386). Roda `hbbs` e `hbbr` no mesmo container. A imagem `ghcr.io/xnetinho/rustdesk-server` (classic) tem só os binários, sem as variáveis abaixo.
+Imagem: `ghcr.io/xnetinho/magodesk-server-s6:latest` (amd64, arm64, armv7, i386). Roda `hbbs` e `hbbr` no mesmo container. A imagem `ghcr.io/xnetinho/magodesk-server` (classic) tem só os binários, sem as variáveis abaixo.
 
 Os workflows `build.yaml` publicam no GHCR com o `GITHUB_TOKEN`, sem outros secrets. O disparo é manual (`workflow_dispatch`) ou por tag `vX.Y.Z`.
 
