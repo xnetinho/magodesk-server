@@ -18,8 +18,8 @@ on:
 env:
   CARGO_TERM_COLOR: always
   LATEST_TAG: latest
-  GHCR_IMAGE: ghcr.io/xnetinho/rustdesk-server-s6
-  GHCR_IMAGE_CLASSIC: ghcr.io/xnetinho/rustdesk-server
+  GHCR_IMAGE: ghcr.io/xnetinho/magodesk-server-s6
+  GHCR_IMAGE_CLASSIC: ghcr.io/xnetinho/magodesk-server
   
 jobs:
 

@@ -1,6 +1,6 @@
 # Deploy com Docker
 
-Imagem: `ghcr.io/xnetinho/rustdesk-server-s6:latest` (amd64, arm64, armv7, i386). Roda `hbbs` e `hbbr` no mesmo container. A imagem `ghcr.io/xnetinho/rustdesk-server` (classic) tem só os binários, sem as variáveis abaixo.
+Imagem: `ghcr.io/xnetinho/magodesk-server-s6:latest` (amd64, arm64, armv7, i386). Roda `hbbs` e `hbbr` no mesmo container. A imagem `ghcr.io/xnetinho/rustdesk-server` (classic) tem só os binários, sem as variáveis abaixo.
 
 Os workflows `build.yaml` publicam no GHCR com o `GITHUB_TOKEN`, sem outros secrets. O disparo é manual (`workflow_dispatch`) ou por tag `vX.Y.Z`.
 
@@ -24,7 +24,7 @@ TCP 21115, 21116, 21117 e UDP 21116. As portas 21118 (WebSocket do `hbbs`) e 211
 ```yaml
 services:
   rustdesk:
-    image: ghcr.io/xnetinho/rustdesk-server-s6:latest
+    image: ghcr.io/xnetinho/magodesk-server-s6:latest
     container_name: rustdesk
     restart: unless-stopped
     environment:
