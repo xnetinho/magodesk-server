@@ -61,6 +61,10 @@ reqwest = { git = "https://github.com/rustdesk-org/reqwest", features = ["blocki
 [target.'cfg(not(any(target_os = "macos", target_os = "windows")))'.dependencies]
 reqwest = { git = "https://github.com/rustdesk-org/reqwest", features = ["blocking", "socks", "json", "rustls-tls", "rustls-tls-native-roots", "gzip"], default-features=false }
 
+[target.'cfg(target_os = "linux")'.dependencies]
+# hbb_common enables native-tls on tungstenite; musl cross images ship no system OpenSSL
+openssl = { version = "0.10", features = ["vendored"] }
+
 [build-dependencies]
 hbb_common = { path = "libs/hbb_common" }
 
