@@ -68,6 +68,10 @@ openssl = { version = "0.10", features = ["vendored"] }
 [build-dependencies]
 hbb_common = { path = "libs/hbb_common" }
 
+[target.'cfg(target_os = "linux")'.build-dependencies]
+# resolver 2 does not unify features between build and normal deps, so vendor here too
+openssl = { version = "0.10", features = ["vendored"] }
+
 [workspace]
 members = ["libs/hbb_common"]
 exclude = ["ui"]
